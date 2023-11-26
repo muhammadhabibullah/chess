@@ -41,7 +41,7 @@ func New() Board {
 		for _, yAxis := range yAxes {
 			board.squares[xAxis][yAxis] = square.New(xAxis, yAxis)
 			if initPiece := InitPiece(xAxis, yAxis); initPiece != nil {
-				board.squares[xAxis][yAxis].SetPiece(InitPiece(xAxis, yAxis))
+				board.squares[xAxis][yAxis].SetPiece(initPiece)
 			}
 		}
 	}
